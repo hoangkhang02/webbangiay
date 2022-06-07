@@ -1,0 +1,556 @@
+.main{
+    width: 576px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50px 100px 1340px 430px 30px;
+    grid-template-areas: 
+    "header"
+    "header-link"
+    "container"
+    "footer"
+    "cpright";
+}
+/*------------------------------------------------------*/
+.header{
+    grid-area: header;
+    text-align: center;
+    letter-spacing: 0.8px;
+    line-height: 10px;
+
+}
+    .tieude1{
+        padding-top: 8px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .tieude2{
+        font-size: 12px;
+        font-style: italic;
+    }
+/*------------------------------------------------------*/
+.header-link{
+    grid-area: header-link;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-rows: 50px 50px;
+    grid-template-areas: 
+    "HL-left HL-right"
+    "HL-mid HL-mid";
+
+}
+.HL-left{
+    grid-area: HL-left;
+}
+    ul{
+        list-style-type: none;
+    }
+    /*giải quyết float*/
+    .clear::before, .clear::after{
+        content: '';
+        display: table;
+        clear: both;
+    }
+    .menu-left{
+        background: black; 
+        height: 50px;
+        padding-top: 5px; 
+    }
+    /*menu cấp 1*/
+    .menu-left > li{
+        float: left;
+        position: relative;
+    }
+    .menu-left > li a{
+        display: block;
+        font-size: 12px;
+        padding: 10px;
+        color: #fff;
+        text-decoration: none;
+    }
+    .menu-left > li a:hover, .menu-left li:hover > a{
+        font-weight: bold;
+        border-radius: 50px;
+        background: gold;
+    }
+    .menu-left-gt{
+        display: none;
+    }
+    .menu-left-lh{
+        display: none;
+    }
+    /*menu cấp 2*/
+    .menu-left ul{
+        position: absolute;
+        top: 80%;
+        left: 20px;
+        min-width: 120px;
+        background-color:black;
+        display: none;
+        margin-top: 15px;
+        padding: 0;
+    }
+    .menu-left ul li{
+        text-align: left;
+    }
+    .menu-left li:hover > ul{
+        display: block;
+    }
+.HL-mid{
+    grid-area: HL-mid;
+}
+    .HL-mid .search-container {
+        text-align: center;
+        background-color: black;
+        height: 50px;
+    }
+    .HL-mid input[type=text] {
+        padding: 6px 10px;
+        font-size: 12px;
+        margin-top: 8px;
+        width: 250px;
+        border-radius: 5px;
+    }      
+    .HL-mid .search-container button {
+        padding: 6px;
+        background: #ddd;
+        margin-top: 8px;
+        font-size: 12px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }        
+    .HL-mid .search-container button:hover {
+        background-color:gainsboro;
+        color: black;
+        font-weight: bold;
+    }
+.HL-right{
+    grid-area: HL-right;
+}
+    ul{
+        list-style-type: none;
+    }
+    .clear::before, .clear::after{
+        content: '';
+        display: table;
+        clear: both;
+    }
+    .menu-right{
+        background: black; 
+        height: 50px;
+        padding-top: 5px;
+        padding-left: 80px;
+    }
+    /*menu cấp 1*/
+    .menu-right > li{
+        float: left;
+        position: relative;
+    }
+    .menu-right > li a{
+        display: block;
+        font-size: 12px;
+        padding: 10px;
+        color: #fff;
+        text-decoration: none;
+    }
+    .menu-right > li a:hover, .menu-right li:hover > a{
+        font-weight: bold;
+        border-radius: 50px;
+        background: gold;
+    }
+    /*menu cấp 2*/
+    .menu-right ul{
+        position: absolute;
+        top: 80%;
+        left: 20px;
+        min-width: 120px;
+        background-color:black;
+        display: none;
+        margin-top: 15px;
+        padding: 0;
+    }
+    .menu-right ul li{
+        text-align: left;
+    }
+    .menu-right li:hover > ul{
+        display: block;
+    }
+/*------------------------------------------------------*/
+.container{
+    grid-area: container;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40px 1300px;
+    grid-template-areas: 
+    "container-1"
+    "container-2";
+
+}
+    .container-1{
+        grid-area: container-1;
+        line-height: 40px;
+        font-size: 16px;
+        padding-left: 15px;
+    }
+    #con-1-top1 a{
+        text-decoration: none;
+        color: black;
+    }
+    .con-1-top2{
+        color: red;
+        font-weight: bold;
+    }
+
+    .container-2{
+        grid-area: container-2;
+    }
+        .con-2-dong1{
+            font-size: 16px;
+            padding-left: 15px;
+            padding-top: 15px;
+        }
+        .con-2-nd{
+            vertical-align: middle;
+            text-align: justify;
+        }
+        .con-2-nd-bold{
+            font-weight: bold;
+        }
+        .con-2-nd-bold1{
+            font-weight: bold;
+            font-style: italic;
+        }
+/*------------------------------------------------------*/
+.footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-rows: 110px 320px;
+    grid-template-areas: 
+        "F1"
+        "F2";
+}
+    .F1{
+        background-color: dimgray;
+        grid-area: F1;
+        text-align: center;
+        padding-top: 5px;
+    }
+        .F-F1a{
+            font-weight: bold;
+            color: white;
+            font-size: 13px;
+        }
+        .F-F1b{
+            font-size: 12px;
+            padding-top: 5px;
+            color: white;
+        }
+        .F-F1c{
+            font-weight: bold;
+            color: gold;
+        }
+        .F1 input[type=text] {
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 14px;
+            width: 300px;
+        }
+        .search-footer button {
+            padding: 8px;
+            background: red;
+            font-size: 14px;
+            color: white;
+            border: none;
+            width: 80px;
+
+        }
+        .search-footer button:hover {
+            background: #ccc;
+        }
+    .F2{
+        background-color: black;
+        grid-area: F2;
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+            "F2a F2b"
+            "F2c F2c";
+    }
+        .F2a{
+            grid-area: F2a;
+        }
+        .F2b{
+            grid-area: F2b;
+        }
+        .F2c{
+            grid-area: F2c;
+        }
+        #ft1{
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            padding-top: 10px;
+            padding-left: 30px;
+        }
+        #ft2{
+            color: white;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            line-height: 20px;
+            padding-left: 30px;
+        }
+        #ft2 a{
+            text-decoration: none;
+            color: white;
+        }
+        #ft2 a:hover{
+            color: gold;
+        }
+/*------------------------------------------------------*/
+.cpright{
+    grid-area: cpright;
+    background-color:slategray;
+    color: white;
+    text-align: center;
+}
+    .cpr1{
+        font-size: 10px;
+        line-height: 30px;
+    }
+
+
+    @media screen and ( min-width : 576px ) {
+        .main{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 100px 80px 940px 300px 40px;
+            grid-template-areas: 
+            "header"
+            "header-link"
+            "container"
+            "footer"
+            "cpright";
+        }
+        /*------------------------------------------------------*/
+        .header{
+            background-color: black;
+            letter-spacing: 1px;
+            margin-left: 250px;
+            margin-right: 250px;
+            line-height: 30px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+            .tieude1{
+                font-size: 40px;
+                padding-top: 15px;
+                font-weight: bold;
+                color: white;
+            }
+            .tieude2{
+                font-size: 18px;
+                color: white;
+                font-style: italic;
+            }
+        /*------------------------------------------------------*/
+        .header-link{
+            display: grid;
+            grid-template-columns: 1.3fr 1fr 0.7fr;
+            grid-template-rows: 50px;
+            grid-template-areas: 
+            "HL-left HL-mid HL-right";
+
+        }
+        .HL-left{
+            grid-area: HL-left;
+        }
+            .menu-left{
+                background: white; 
+                padding-left: 50px; 
+                margin-top: 5px;
+            }
+            /*menu cấp 1*/
+            .menu-left > li a{
+                font-size: 17px;
+                padding: 15px;
+                color: black;
+                font-weight: bold;
+            }
+            .menu-left-gt{
+                display: inline;
+            }
+            .menu-left-lh{
+                display: inline;
+            }
+            /*menu cấp 2*/
+            .menu-left ul{
+                top: 45px;
+                left: 20px;
+                min-width: 180px;
+                background-color: #fff;
+                margin-top: 10px;
+            }
+        .HL-mid{
+            grid-area: HL-mid;
+        }
+            .HL-mid .search-container {
+                background-color: white;
+            }
+            .HL-mid input[type=text] {
+                padding: 10px 15px;
+                font-size: 15px;
+                margin-top: 12px;
+                width: 350px;
+                border-radius: 50px;
+            }      
+            .HL-mid .search-container button {
+                padding: 12px;
+                background: #ddd;
+                margin-top: 12px;
+                font-size: 15px;
+                border-radius: 5px;
+            }        
+            .HL-mid .search-container button:hover {
+                background-color: #ccc;
+            }
+        .HL-right{
+            grid-area: HL-right;
+        }
+            .menu-right{
+                background: white;
+                padding-left: 80px; 
+                margin-top: 5px;
+            }
+            /*menu cấp 1*/
+            .menu-right > li a{
+                font-size: 17px;
+                padding: 15px;
+                color: black;
+                font-weight: bold;
+            }
+            /*menu cấp 2*/
+            .menu-right ul{
+                top: 45px;
+                left: 20px;
+                min-width: 160px;
+                background-color: #fff;
+                margin-top: 10px;
+            }
+        /*------------------------------------------------------*/
+        
+        .container{
+            background-color: white;
+            grid-area: container;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 40px 900px;
+            grid-template-areas: 
+            "container-1"
+            "container-2";
+        }
+            .container-1{
+                font-size: 18px;
+                padding-left: 30px;
+            }
+            .con-2-dong1{
+                font-size: 20px;
+                padding-left: 20px;
+                padding-top: 20px;
+            }
+            .con-2-dong2{
+                padding: 40%;
+                font-weight: bold;
+            }
+            .con-2-nd{
+                font-size: 18px;
+            }
+        /*------------------------------------------------------*/
+        .footer{
+            display: grid;
+            grid-template-rows: 80px 220px;
+            grid-template-areas: 
+                "F1"
+                "F2";
+        }
+            .F1{
+                background-color: dimgray;
+                grid-area: F1;
+            }
+                .F-F1a{
+                    float: left;
+                    padding-left: 20px;
+                    padding-top: 20px;
+                    font-size: 20px;
+                }
+                .F-F1b{
+                    font-size: 20px;
+                    padding-top: 20px;
+                    padding-right: 20px;
+                    float: right;
+                }
+                .F-F1c{
+                    font-weight: bold;
+                    color: gold;
+                }
+                .F1 input[type=text] {
+                    padding: 6px;
+                    margin-top: 15px;
+                    font-size: 16px;
+                    width: 500px;
+                    
+                }
+                .search-footer button {
+                    padding: 8px;
+                    background: red;
+                    font-size: 16px;
+                    color: white;
+                    border: none;
+                    width: 100px;
+
+                }
+                .search-footer button:hover {
+                    background: #ccc;
+                }
+            .F2{
+                background-color:gainsboro;
+                grid-area: F2;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-areas: 
+                    "F2a F2b F2c";
+            }
+                #ft1{
+                    color: black;
+                    font-size: 18px;
+                    font-weight: bold;
+                    padding-left: 100px;
+                    padding-top: 10px;
+                }
+                #ft2{
+                    color: black;
+                    font-size: 15px;
+                    padding-left: 100px;
+                    letter-spacing: 0.5px;
+                    line-height: 30px;
+                }
+                #ft2 a{
+                    text-decoration: none;
+                    color: black;
+                }
+                #ft2 a:hover{
+                    font-weight: bold;
+                    padding-left: 10px;
+                    color: tomato;
+                }
+        /*------------------------------------------------------*/
+        .cpright{
+            background-color:darkgray;
+            color: black;
+        }
+            .cpr1{
+                font-size: 12px;
+                line-height: 40px;
+            }
+    }

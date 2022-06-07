@@ -1,0 +1,147 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+main{
+    width: 576px;
+    min-height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    background-color:lightgreen;
+}
+#head{
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    padding-top: 20px;
+    
+}
+
+.login-form{
+    width: 400px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+}
+h1{
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 10px;
+}
+.input-box{
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+.input-box input{
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    padding-left: 10px;
+    border: 1px solid #cccccc;
+    outline: none;
+}
+.btn-box{
+    text-align: center;
+    margin-top: 30px;
+}
+.btn-box button{
+    width: 300px;
+    border-radius: 10px;
+    height: 40px;
+    background-color:deepskyblue;
+    border: none;
+}
+#doan2{
+    text-align: center;
+    font-size: 12px;
+    padding-top: 15px;
+    color: gray;
+}
+.btn-bbox{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+#btn1{
+    width: 150px;
+    border-radius: 10px;
+    height: 40px;
+    background-color:red;
+    border: none;
+}
+#btn2{
+    width: 150px;
+    border-radius: 10px;
+    height: 40px;
+    background-color:blue;
+    border: none;
+}
+#a1{
+    text-decoration: none;
+    color: white;
+}
+#hinh{
+    width: 25px;
+}
+
+#d3{
+    font-size: 12px;
+    text-align: center;
+    padding-top: 15px;
+}
+#d4{
+    font-size: 12px;
+    text-align: center;
+    color: red;
+    padding-bottom: 15px;
+    padding-top: 10px;
+}
+@media screen and ( min-width : 576px ) {
+    main{
+        width: 1000px;
+        min-height: 600px;
+        background-color:lightskyblue;
+    }
+    #head{
+        color: black;
+        font-size: 25px;
+    }
+    
+    .login-form{
+        width: 600px;
+    }
+    h1{
+        font-size: 20px;
+    }
+    .input-box input{
+        width: 450px;
+    }
+    .btn-box button{
+        width: 400px;
+    }
+    #doan2{
+        font-size: 14px;
+    }
+    #btn1{
+        width: 200px;
+    }
+    #btn2{
+        width: 200px;
+    }
+    #d3{
+        font-size: 14px;
+        padding-top: 5px;
+    }
+    #d4{
+        font-size: 14px;
+        padding-bottom: 10px;
+        padding-top: 5px;
+    }
+}
